@@ -3,8 +3,8 @@
 <meta content="" name="keywords">
 
 <!-- Favicons -->
-<link href="assets/img/logo_icon.png" rel="icon">
-<link href="assets/img/apple-touch-logo.png" rel="apple-touch-icon">
+<link href="assets/img/logo.png" rel="icon">
+<link href="assets/img/logo.png" rel="apple-touch-icon">
 
 <!-- Google Fonts -->
 <link href="https://fonts.gstatic.com" rel="preconnect">

@@ -125,7 +125,7 @@ require_once("resources/function.php")
                                             <i class="bi bi-currency-dollar"></i>
                                         </div>
                                         <div class="ps-3">
-                                            <h6>₹<?php echo $agent_coungt_data_w['wallet'] ?></h6>
+                                            <h6>₹<?php echo $agent_coungt_data_w['wallet']; ?></h6>
                                             <span class="text-success small pt-1 fw-bold">Amount</span> <span class="text-muted small pt-2 ps-1"></span>
                                         </div>
                                     </div>
@@ -238,10 +238,10 @@ require_once("resources/function.php")
 
                                     <div class="d-flex align-items-center">
                                         <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                            <i class="bi bi-people"></i>
+                                            <i class="bi bi-currency-dollar"></i>
                                         </div>
                                         <div class="ps-3">
-                                            <h6><?php echo $withdraw_data['withdraw'] ?></h6>
+                                            <h6>₹<?php echo $withdraw_data['withdraw'] ?></h6>
                                             <span class="text-danger small pt-1 fw-bold">Amount</span> <span class="text-muted small pt-2 ps-1"></span>
 
                                         </div>
@@ -261,7 +261,10 @@ require_once("resources/function.php")
     </main><!-- End #main -->
 
     <!-- ======= Footer ======= -->
-    <?php require_once("resources/footer_links.php")?>
+    <?php 
+    require_once("resources/footer.php");
+    require_once("resources/footer_links.php");
+    ?>
 
 </body>
 

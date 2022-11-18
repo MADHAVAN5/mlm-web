@@ -11,16 +11,18 @@ require_once("resources/function.php")
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Dashboard - NiceAdmin Bootstrap Template</title>
+    <title>Dashboard</title>
     
     <?php require_once("resources/header_links.php"); ?>
 </head>
 
 <body>
 
-    <?php require_once("resources/header.php"); ?>
-    <!-- ======= Sidebar ======= -->
-    <?php require_once("resources/sidebar.php");?>
+    <?php 
+        require_once("resources/header.php");
+        // ======= Sidebar =======
+        require_once("resources/sidebar.php");
+    ?>
     <main id="main" class="main">
 
         <div class="pagetitle">
@@ -40,8 +42,11 @@ require_once("resources/function.php")
         </section>
 
     </main><!-- End #main -->
-
-   <?php require_once("resources/footer_links.php")?>
+    
+    <?php
+        require_once("resources/footer.php"); 
+        require_once("resources/footer_links.php");
+    ?>
 
 </body>
 
