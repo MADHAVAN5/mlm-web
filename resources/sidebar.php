@@ -38,6 +38,13 @@
             </ul>
         </li><!-- End income Nav -->
 
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="withdrawal.php">
+                <i class="bi bi-box-arrow-down"></i>
+                <span>Withdrawal</span>
+            </a>
+        </li>
+
     </ul>
 
 </aside><!-- End Sidebar-->
