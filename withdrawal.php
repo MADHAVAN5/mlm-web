@@ -11,7 +11,7 @@ require_once("resources/function.php")
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Dashboard</title>
+    <title>Withdrawal</title>
 
     <?php require_once("resources/header_links.php"); ?>
 </head>
@@ -30,6 +30,7 @@ require_once("resources/function.php")
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                    <li class="breadcrumb-item">Wallet</li>
                     <li class="breadcrumb-item active">Withdrawal</li>
                 </ol>
             </nav>

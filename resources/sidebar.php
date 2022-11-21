@@ -39,9 +39,37 @@
         </li><!-- End income Nav -->
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="withdrawal.php">
-                <i class="bi bi-box-arrow-down"></i>
-                <span>Withdrawal</span>
+            <a class="nav-link collapsed" data-bs-target="#wallet-nav" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-wallet2"></i><span>Wallet</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="wallet-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="add_money.php">
+                        <i class="bi bi-circle"></i><span>Add Money</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="withdrawal.php">
+                        <i class="bi bi-circle"></i><span>withdraw Money</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="wallet_history.php">
+                        <i class="bi bi-circle"></i><span>Wallet History</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="withdrawal_history.php">
+                        <i class="bi bi-circle"></i><span>Withdrawal History</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="referral.php">
+                <i class="bi bi-people-fill"></i>
+                <span>Refer and Earn</span>
             </a>
         </li>
 

@@ -11,34 +11,34 @@ require_once("resources/function.php")
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Income</title>
-    
+    <title>History</title>
+
     <?php require_once("resources/header_links.php"); ?>
 </head>
 
 <body>
 
-    <?php 
-        require_once("resources/header.php");
-        // ======= Sidebar =======
-        require_once("resources/sidebar.php");
+    <?php
+    require_once("resources/header.php");
+    // ======= Sidebar =======
+    require_once("resources/sidebar.php");
     ?>
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>Referral Income</h1>
+            <h1>Level Income</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                    <li class="breadcrumb-item">Income</li>
-                    <li class="breadcrumb-item active">Referral Income</li>
+                    <li class="breadcrumb-item">Wallet</li>
+                    <li class="breadcrumb-item active">Withdraw History</li>
                 </ol>
             </nav>
         </div>
 
         <section class="section dashboard">
             <div class="row">
-            <div class="col-lg-12">
+                <div class="col-lg-12">
                     <div class="card recent-sales overflow-auto">
                         <div class="card-body">
                             <!-- <h5 class="card-title">Level Income</h5> -->
@@ -49,23 +49,27 @@ require_once("resources/function.php")
                                     <tr>
                                         <th scope="col">#</th>
                                         <th scope="col">Amount</th>
+                                        <th scope="col">Payable Amount</th>
+                                        <th scope="col">Deduction</th>
                                         <th scope="col">Status</th>
-                                        <th scope="col">Desp</th>
-                                        <th scope="col">Time</th>
+                                        <th scope="col">Request Date</th>
+                                        <th scope="col">Approve Date</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php
-                                    $direct_agent_list_query = mysqli_query($conn, "SELECT * FROM `wallet_history` WHERE `agent_id`= '$my_id' AND `desp`='Referral Income' ORDER BY `wallet_history`.`date_time` DESC");
+                                    $direct_agent_list_query = mysqli_query($conn, "SELECT * FROM `withdraw_history` WHERE `agent_id`= '$my_id' ORDER BY `withdraw_history`.`req_time` DESC");
                                     $a = 0;
                                     while ($data = mysqli_fetch_array($direct_agent_list_query)) {
                                     ?>
                                         <tr>
                                             <th scope="row"><?php echo ++$a; ?></th>
-                                            <td><?php echo $data['amt']; ?></td>
-                                            <td><?php echo ($data['status']) ? 'Debit' : 'Credit'; ?></td>
-                                            <td><?php echo $data['desp']; ?></td>
-                                            <td><?php echo $data['date_time']; ?></td>
+                                            <td><?php echo $data['amount']; ?></td>
+                                            <td><?php echo $data['payable_amt']; ?></td>
+                                            <td><?php echo $data['amount'] - $data['payable_amt']; ?></td>
+                                            <td><?php echo ($data['status']) ? 'Request Accepted' : 'Pending'; ?></td>
+                                            <td><?php echo $data['req_time']; ?></td>
+                                            <td><?php echo ($data['status']) ? $data['approve_time'] : 'NA'; ?></td>
                                         </tr>
                                     <?php
                                     }
@@ -82,10 +86,10 @@ require_once("resources/function.php")
         </section>
 
     </main><!-- End #main -->
-    
+
     <?php
-        require_once("resources/footer.php"); 
-        require_once("resources/footer_links.php");
+    require_once("resources/footer.php");
+    require_once("resources/footer_links.php");
     ?>
 
 </body>

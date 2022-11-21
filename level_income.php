@@ -11,7 +11,7 @@ require_once("resources/function.php")
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Dashboard</title>
+    <title>Income</title>
 
     <?php require_once("resources/header_links.php"); ?>
 </head>
@@ -39,7 +39,7 @@ require_once("resources/function.php")
         <section class="section dashboard">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="card">
+                    <div class="card recent-sales overflow-auto">
                         <div class="card-body">
                             <!-- <h5 class="card-title">Level Income</h5> -->
 

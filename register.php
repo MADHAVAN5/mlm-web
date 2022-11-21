@@ -59,7 +59,7 @@ session_start();
                                     ?>
                                         <div class="alert alert-success">
                                             <?php
-                                            echo "Agent ID : {$_SESSION['agent_id']} <br> Name : {$_SESSION['Name']}";
+                                            echo "Agent ID : AS{$_SESSION['agent_id']} <br> Name : {$_SESSION['Name']}";
                                             unset($_SESSION['agent_id']);
                                             unset($_SESSION['Name']);
                                             ?>
