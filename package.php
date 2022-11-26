@@ -56,19 +56,12 @@ require_once("resources/function.php")
                                     <li><strong>12</strong>totel levels</li>
                                     <li><strong>...</strong></li>
                                 </ul>
-                                <button name="silver-pkg-btn" type="button" data-toggle="modal" data-target="#b_silver" class="order-btn">
+                                <button name="silver-pkg-btn" type="button" data-bs-toggle="modal" data-bs-target="#b_silver" class="order-btn">
                                     <?php
                                     if ($a['package'] == "b-silver") {
                                         echo "Active";
-                                    } elseif (check_payment($my_id)) {
-                                        $b = mysqli_fetch_array(mysqli_query($conn, "SELECT * FROM `payment_proof` WHERE `agent_id`='$my_id'"));
-                                        if ($b['package'] == "b-silver") {
-                                            echo "Request Send";
-                                        } else {
-                                            echo "Order Now";
-                                        }
                                     } else {
-                                        echo "Order Now";
+                                        echo "Active Now";
                                     }
                                     ?>
                                 </button>
@@ -84,19 +77,12 @@ require_once("resources/function.php")
                                     <li><strong>100</strong>/Auto fill</li>
                                     <li><strong>12</strong>totel levels</li>
                                 </ul>
-                                <button name="gold-pkg-btn" type="button" data-toggle="modal" data-target="#b_gold" class="order-btn">
+                                <button name="gold-pkg-btn" type="button" data-bs-toggle="modal" data-bs-target="#b_gold" class="order-btn">
                                     <?php
                                     if ($a['package'] == "b-gold") {
                                         echo "Active";
-                                    } elseif (check_payment($my_id)) {
-                                        $b = mysqli_fetch_array(mysqli_query($conn, "SELECT * FROM `payment_proof` WHERE `agent_id`='$my_id'"));
-                                        if ($b['package'] == "b-gold") {
-                                            echo "Request Send";
-                                        } else {
-                                            echo "Order Now";
-                                        }
                                     } else {
-                                        echo "Order Now";
+                                        echo "Active Now";
                                     }
                                     ?>
                                 </button>
@@ -112,19 +98,12 @@ require_once("resources/function.php")
                                     <li><strong>100</strong>/Auto fill</li>
                                     <li><strong>12</strong>totel levels</li>
                                 </ul>
-                                <button name="diamond-pkg-btn" type="button" data-toggle="modal" data-target="#b_diamond" class="order-btn">
+                                <button name="diamond-pkg-btn" type="button" data-bs-toggle="modal" data-bs-target="#b_diamond" class="order-btn">
                                     <?php
                                     if ($a['package'] == "b-diamond") {
                                         echo "Active";
-                                    } elseif (check_payment($my_id)) {
-                                        $b = mysqli_fetch_array(mysqli_query($conn, "SELECT * FROM `payment_proof` WHERE `agent_id`='$my_id'"));
-                                        if ($b['package'] == "b-diamond") {
-                                            echo "Request Send";
-                                        } else {
-                                            echo "Order Now";
-                                        }
                                     } else {
-                                        echo "Order Now";
+                                        echo "Active Now";
                                     }
                                     ?>
                                 </button>
@@ -140,19 +119,12 @@ require_once("resources/function.php")
                                     <li><strong>100</strong>/Auto fill</li>
                                     <li><strong>12</strong>totel levels</li>
                                 </ul>
-                                <button name="untimate-pkg-btn" type="button" data-toggle="modal" data-target="#b_platinum" class="order-btn">
+                                <button name="untimate-pkg-btn" type="button" data-bs-toggle="modal" data-bs-target="#b_platinum" class="order-btn">
                                     <?php
                                     if ($a['package'] == "b-platinum") {
                                         echo "Active";
-                                    } elseif (check_payment($my_id)) {
-                                        $b = mysqli_fetch_array(mysqli_query($conn, "SELECT * FROM `payment_proof` WHERE `agent_id`='$my_id'"));
-                                        if ($b['package'] == "b-platinum") {
-                                            echo "Request Send";
-                                        } else {
-                                            echo "Order Now";
-                                        }
                                     } else {
-                                        echo "Order Now";
+                                        echo "Active Now";
                                     }
                                     ?>
                                 </button>
@@ -174,19 +146,12 @@ require_once("resources/function.php")
                                     <li><strong>5500</strong>/Auto fill</li>
                                     <li><strong></strong></li>
                                 </ul>
-                                <button type="button" data-toggle="modal" data-target="#p_silver" class="order-btn">
+                                <button type="button" data-bs-toggle="modal" data-bs-target="#p_silver" class="order-btn">
                                     <?php
                                     if ($a['package'] == "p-silver") {
                                         echo "Active";
-                                    } elseif (check_payment($my_id)) {
-                                        $b = mysqli_fetch_array(mysqli_query($conn, "SELECT * FROM `payment_proof` WHERE `agent_id`='$my_id'"));
-                                        if ($b['package'] == "p-silver") {
-                                            echo "Request Send";
-                                        } else {
-                                            echo "Order Now";
-                                        }
                                     } else {
-                                        echo "Order Now";
+                                        echo "Active Now";
                                     }
                                     ?>
                                 </button>
@@ -201,19 +166,12 @@ require_once("resources/function.php")
                                     <li><strong>25000</strong>/Auto fill</li>
                                     <li><strong></strong></li>
                                 </ul>
-                                <button type="button" data-toggle="modal" data-target="#p_gold" class="order-btn">
+                                <button type="button" data-bs-toggle="modal" data-bs-target="#p_gold" class="order-btn">
                                     <?php
                                     if ($a['package'] == "p-gold") {
                                         echo "Active";
-                                    } elseif (check_payment($my_id)) {
-                                        $b = mysqli_fetch_array(mysqli_query($conn, "SELECT * FROM `payment_proof` WHERE `agent_id`='$my_id'"));
-                                        if ($b['package'] == "p-gold") {
-                                            echo "Request Send";
-                                        } else {
-                                            echo "Order Now";
-                                        }
                                     } else {
-                                        echo "Order Now";
+                                        echo "Active Now";
                                     }
                                     ?>
                                 </button>
@@ -228,22 +186,162 @@ require_once("resources/function.php")
                                     <li><strong>33300</strong>/Auto fill</li>
                                     <li><strong></strong></li>
                                 </ul>
-                                <button type="button" data-toggle="modal" data-target="#p_diamond" class="order-btn">
+                                <button type="button" data-bs-toggle="modal" data-bs-target="#p_diamond" class="order-btn">
                                     <?php
                                     if ($a['package'] == "p-diamond") {
                                         echo "Active";
-                                    } elseif (check_payment($my_id)) {
-                                        $b = mysqli_fetch_array(mysqli_query($conn, "SELECT * FROM `payment_proof` WHERE `agent_id`='$my_id'"));
-                                        if ($b['package'] == "p-diamond") {
-                                            echo "Request Send";
-                                        } else {
-                                            echo "Order Now";
-                                        }
                                     } else {
-                                        echo "Order Now";
+                                        echo "Active Now";
                                     }
                                     ?>
                                 </button>
+                            </div>
+                            <div class="modal fade" id="b_silver" tabindex="-1">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">BASIC SILVER</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body" style="text-align:center">
+                                            Are you sure?
+                                            <br>
+                                            Are you sure to purchase this package
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <form action="./request_handler.php" method="post">
+                                                <button type="submit" name="b_silver_btn" class="btn btn-primary">confirm</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal fade" id="b_gold" tabindex="-1">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">BASIC GOLD</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body" style="text-align:center">
+                                            Are you sure?
+                                            <br>
+                                            Are you sure to purchase this package
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <form action="./request_handler.php" method="post">
+                                                <button type="submit" name="b_gold_btn" class="btn btn-primary">confirm</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal fade" id="b_diamond" tabindex="-1">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">BASIC DIAMOND</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body" style="text-align:center">
+                                            Are you sure?
+                                            <br>
+                                            Are you sure to purchase this package
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <form action="./request_handler.php" method="post">
+                                                <button type="submit" name="b_diamond_btn" class="btn btn-primary">confirm</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal fade" id="b_platinum" tabindex="-1">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">BASIC PLATINUM</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body" style="text-align:center">
+                                            Are you sure?
+                                            <br>
+                                            Are you sure to purchase this package
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <form action="./request_handler.php" method="post">
+                                                <button type="submit" name="b_platinum_btn" class="btn btn-primary">confirm</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal fade" id="p_silver" tabindex="-1">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">PRIMIUM SILVER</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body" style="text-align:center">
+                                            Are you sure?
+                                            <br>
+                                            Are you sure to purchase this package
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <form action="./request_handler.php" method="post">
+                                                <button type="submit" name="p_silver_btn" class="btn btn-primary">confirm</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal fade" id="p_gold" tabindex="-1">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">PRIMIUM GOLD</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body" style="text-align:center">
+                                            Are you sure?
+                                            <br>
+                                            Are you sure to purchase this package
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <form action="./request_handler.php" method="post">
+                                                <button type="submit" name="p_gold_btn" class="btn btn-primary">confirm</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal fade" id="p_diamond" tabindex="-1">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">PRIMIUM DIAMOND</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body" style="text-align:center">
+                                            Are you sure?
+                                            <br>
+                                            Are you sure to purchase this package
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <form action="request_handler.php" method="post">
+                                                <button type="submit" name="p_diamond_btn" class="btn btn-primary">confirm</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -1,5 +1,5 @@
 <?php
-    session_start();
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,11 +45,38 @@
                                     if (isset($_SESSION['error'])) {
                                     ?>
                                         <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                            Login Invalid
+                                            <?php
+                                            if ($_SESSION['error'] == 'email') {
+                                                echo "Email Not Verified";
+                                            } else {
+                                                echo "Login Invalid";
+                                            }
+                                            ?>
                                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                         </div>
                                     <?php
                                         unset($_SESSION['error']);
+                                    }
+                                    ?>
+
+                                    <?php
+                                    if (isset($_SESSION['status'])) {
+                                        if ($_SESSION['status'] == 4) {
+                                    ?>
+                                            <div class="alert alert-primary bg-primary text-light border-0 alert-dismissible fade show" role="alert">
+                                                <i class="bi bi-check-circle-fill"></i> Email verifed successfully
+                                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+                                            </div>
+                                        <?php
+                                        } elseif ($_SESSION['status'] == 5) {
+                                        ?>
+                                            <div class="alert alert-danger bg-danger text-light border-0 alert-dismissible fade show" role="alert">
+                                                Email already verifed
+                                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+                                            </div>
+                                    <?php
+                                        }
+                                        unset($_SESSION['status']);
                                     }
                                     ?>
 

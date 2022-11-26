@@ -47,6 +47,8 @@ session_start();
                                                 echo "Sponser ID not Valid";
                                             } elseif ($_SESSION['error'] == 'Mobile') {
                                                 echo "Mobile Number is already used";
+                                            } elseif ($_SESSION['error'] == 'Email') {
+                                                echo "Email already used";
                                             } else {
                                                 echo "Something went Wrong Try again";
                                             }
@@ -69,11 +71,15 @@ session_start();
                                         unset($_SESSION['error']);
                                     }
                                     ?>
+                                   
 
                                     <form class="row g-3 needs-validation" action="request_handler.php" method="post" novalidate>
                                         <div class="col-12">
                                             <!-- <label for="yourName" class="form-label">Sponsor ID</label> -->
-                                            <input type="text" class="form-control" placeholder="Sponsor ID" name="sps_id" id="sps_id" value="<?php if(isset($_GET['sps_id'])) { echo($_GET['sps_id']); } ?>" pattern="[0-9]{6}" >
+                                            <div class="input-group has-validation">
+                                                <span class="input-group-text" id="inputGroupPrepend">AS</span>
+                                                <input type="text" class="form-control" placeholder="Sponsor ID" name="sps_id" id="sps_id" value="<?php if(isset($_GET['sps_id'])) { echo($_GET['sps_id']); } ?>" pattern="[0-9]{6}" >
+                                            </div>
                                         </div>
 
                                         <div class="col-12">
@@ -82,11 +88,11 @@ session_start();
                                             <div class="invalid-feedback">Please enter name.</div>
                                         </div>
 
-                                        <!-- <div class="col-12">
-                                            <label for="yourEmail" class="form-label">Your Name</label>
-                                            <input type="email" name="email" class="form-control" id="yourEmail" required>
+                                        <div class="col-12">
+                                            <!-- <label for="yourEmail" class="form-label">Your Name</label> -->
+                                            <input type="email" name="user_email" class="form-control" placeholder="Your Email" id="yourEmail" required>
                                             <div class="invalid-feedback">Please enter a valid Email adddress!</div>
-                                        </div> -->
+                                        </div>
 
                                         <div class="col-12">
                                             <!-- <label for="yourUsername" class="form-label">Mobile</label> -->
