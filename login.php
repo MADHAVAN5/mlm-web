@@ -48,6 +48,8 @@ session_start();
                                             <?php
                                             if ($_SESSION['error'] == 'email') {
                                                 echo "Email Not Verified";
+                                            } if ($_SESSION['error'] == 'block') {
+                                                echo "Id Blocked";
                                             } else {
                                                 echo "Login Invalid";
                                             }

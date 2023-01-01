@@ -74,7 +74,7 @@ require_once("resources/function.php")
                                     <li><strong>200</strong>/refer</li>
                                     <li><strong>40</strong>for 10 level</li>
                                     <li><strong>80</strong>for 2 level</li>
-                                    <li><strong>100</strong>/Auto fill</li>
+                                    <li><strong>200</strong>/Auto fill</li>
                                     <li><strong>12</strong>totel levels</li>
                                 </ul>
                                 <button name="gold-pkg-btn" type="button" data-bs-toggle="modal" data-bs-target="#b_gold" class="order-btn">
@@ -95,7 +95,7 @@ require_once("resources/function.php")
                                     <li><strong>500</strong>/refer</li>
                                     <li><strong>125</strong>for 2 level</li>
                                     <li><strong>150</strong>for 2 level</li>
-                                    <li><strong>100</strong>/Auto fill</li>
+                                    <li><strong>500</strong>/Auto fill</li>
                                     <li><strong>12</strong>totel levels</li>
                                 </ul>
                                 <button name="diamond-pkg-btn" type="button" data-bs-toggle="modal" data-bs-target="#b_diamond" class="order-btn">
@@ -116,7 +116,7 @@ require_once("resources/function.php")
                                     <li><strong>2500</strong>/refer</li>
                                     <li><strong>170</strong>for 10 level</li>
                                     <li><strong>200</strong>for 2 level</li>
-                                    <li><strong>100</strong>/Auto fill</li>
+                                    <li><strong>1000</strong>/Auto fill</li>
                                     <li><strong>12</strong>totel levels</li>
                                 </ul>
                                 <button name="untimate-pkg-btn" type="button" data-bs-toggle="modal" data-bs-target="#b_platinum" class="order-btn">
@@ -211,6 +211,7 @@ require_once("resources/function.php")
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                             <form action="./request_handler.php" method="post">
+                                            <input type="text" class="form-control" id="inputPassword" value="<?php echo $my_id?>" name="user" class="form-control" hidden>
                                                 <button type="submit" name="b_silver_btn" class="btn btn-primary">confirm</button>
                                             </form>
                                         </div>
@@ -232,6 +233,7 @@ require_once("resources/function.php")
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                             <form action="./request_handler.php" method="post">
+                                            <input type="text" class="form-control" id="inputPassword" value="<?php echo $my_id?>" name="user" class="form-control" hidden>
                                                 <button type="submit" name="b_gold_btn" class="btn btn-primary">confirm</button>
                                             </form>
                                         </div>
@@ -253,6 +255,7 @@ require_once("resources/function.php")
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                             <form action="./request_handler.php" method="post">
+                                            <input type="text" class="form-control" id="inputPassword" value="<?php echo $my_id?>" name="user" class="form-control" hidden>
                                                 <button type="submit" name="b_diamond_btn" class="btn btn-primary">confirm</button>
                                             </form>
                                         </div>
@@ -274,6 +277,7 @@ require_once("resources/function.php")
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                             <form action="./request_handler.php" method="post">
+                                            <input type="text" class="form-control" id="inputPassword" value="<?php echo $my_id?>" name="user" class="form-control" hidden>
                                                 <button type="submit" name="b_platinum_btn" class="btn btn-primary">confirm</button>
                                             </form>
                                         </div>
@@ -295,6 +299,7 @@ require_once("resources/function.php")
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                             <form action="./request_handler.php" method="post">
+                                            <input type="text" class="form-control" id="inputPassword" value="<?php echo $my_id?>" name="user" class="form-control" hidden>
                                                 <button type="submit" name="p_silver_btn" class="btn btn-primary">confirm</button>
                                             </form>
                                         </div>
@@ -316,6 +321,7 @@ require_once("resources/function.php")
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                             <form action="./request_handler.php" method="post">
+                                            <input type="text" class="form-control" id="inputPassword" value="<?php echo $my_id?>" name="user" class="form-control" hidden>
                                                 <button type="submit" name="p_gold_btn" class="btn btn-primary">confirm</button>
                                             </form>
                                         </div>
@@ -337,6 +343,7 @@ require_once("resources/function.php")
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                             <form action="request_handler.php" method="post">
+                                            <input type="text" class="form-control" id="inputPassword" value="<?php echo $my_id?>" name="user" class="form-control" hidden>
                                                 <button type="submit" name="p_diamond_btn" class="btn btn-primary">confirm</button>
                                             </form>
                                         </div>

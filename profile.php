@@ -82,7 +82,7 @@ require_once("resources/function.php");
                     <div class="card">
                         <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
 
-                            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+                            <img style="width: 150px;" src="assets/img/profile-img.png" alt="Profile" class="rounded-circle">
                             <h2><?php echo $name['agent_name'] ?></h2>
                             <h3><?php echo $package ?></h3>
                         </div>
@@ -235,6 +235,13 @@ require_once("resources/function.php");
                                             <label for="Country" class="col-md-4 col-lg-3 col-form-label">Bank Name</label>
                                             <div class="col-md-8 col-lg-9">
                                                 <input name="bank_name" type="text" class="form-control" id="Country" value="<?php echo $bank['bank_name'] ?>">
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label for="Country" class="col-md-4 col-lg-3 col-form-label">USDT</label>
+                                            <div class="col-md-8 col-lg-9">
+                                                <input name="usdt" type="text" class="form-control" id="Country" value="<?php echo $bank['usdt'] ?>">
                                             </div>
                                         </div>
 

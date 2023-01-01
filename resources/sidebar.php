@@ -4,7 +4,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="index.php">
+            <a class="nav-link collapsed" href="dashboard.php">
                 <i class="bi bi-grid"></i>
                 <span>Dashboard</span>
             </a>
@@ -87,6 +87,13 @@
                     </a>
                 </li>
             </ul>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="add_money_history.php">
+            <i class="bi bi-activity"></i>
+                <span>Track</span>
+            </a>
         </li>
 
         <li class="nav-item">

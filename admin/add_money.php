@@ -47,22 +47,16 @@ require_once("../resources/function.php")
                             if (isset($_SESSION['status'])) {
                                 if ($_SESSION['status'] == 4) {
                             ?>
-                                    <div class="sufee-alert alert with-close alert-success alert-dismissible fade show">
-                                        <span class="badge badge-pill badge-success">Success</span>
+                                    <div class="alert alert-primary bg-primary text-light border-0 alert-dismissible fade show" role="alert">
                                         MONEY ADDED SUCCESSFULLY
-                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
+                                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
                                     </div>
                                 <?php
                                 } else {
                                 ?>
-                                    <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show">
-                                        <span class="badge badge-pill badge-danger">Alert</span>
+                                    <div class="alert alert-primary bg-danger text-light border-0 alert-dismissible fade show" role="alert">
                                         Try Again
-                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
+                                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
                                     </div>
                             <?php
                                 }
@@ -71,7 +65,7 @@ require_once("../resources/function.php")
                             }
                             ?>
                             <!-- Withdrawal Form -->
-                            <form action="request_handler.php" method="POST">
+                            <form action="../request_handler.php" method="POST">
                                 <div class="row mb-3">
                                     <label for="inputEmail3" class="col-sm-2 col-form-label">Agent ID</label>
                                     <div class="input-group col-sm-10">
@@ -80,7 +74,7 @@ require_once("../resources/function.php")
                                     </div>
                                 </div>
                                 <div class="row mb-3">
-                                    <label for="inputPassword3" class="col-sm-5 col-form-label">Withdrawal Amount</label>
+                                    <label for="inputPassword3" class="col-sm-5 col-form-label">Amount</label>
                                     <div class="col-sm-12">
                                         <input type="text" class="form-control" id="inputPassword" name="amount" min="100" step="100" max="10000" class="form-control" required>
                                     </div>
@@ -93,6 +87,49 @@ require_once("../resources/function.php")
 
                         </div>
                     </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="card recent-sales overflow-auto">
+                        <div class="card-body">
+                            <!-- <h5 class="card-title">Level Income</h5> -->
+
+                            <!-- Table with hoverable rows -->
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Agent ID</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Transection ID</th>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Amount</th>
+                                        <th scope="col">Proof</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                    $payment_proof = mysqli_query($conn, "SELECT * FROM `payment_proof` WHERE `status`='0' ORDER BY `payment_proof`.`date` DESC");
+                                    $a = 0;
+                                    while ($data = mysqli_fetch_array($payment_proof)) {
+                                    ?>
+                                        <tr class="tr-shadow">
+                                            <td><?php echo $data['agent_id']; ?></td>
+                                            <td><?php echo $data['name']; ?></td>
+                                            <td><?php echo $data['transaction_id']; ?></td>
+                                            <td><?php echo $data['date']; ?></td>
+                                            <td><?php echo $data['amount']; ?></td>
+                                            <td><a href="../assets/img/payment_proof/<?php echo $data['img_name']; ?>">proof</a></td>
+                                        </tr>
+                                    <?php
+                                    }
+                                    ?>
+                                </tbody>
+                            </table>
+                            <!-- End Table with hoverable rows -->
+
+                        </div>
+                    </div>
+
                 </div>
 
             </div>

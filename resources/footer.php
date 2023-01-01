@@ -1,3 +1,23 @@
+<style>
+    .bottomright {
+        position: absolute;
+        position: fixed;
+        bottom: 75px;
+        right: 16px;
+        font-size: 15px;
+    }
+    .bottomright a {
+        padding: 5px;
+        border-radius: 10px;
+        background-color: #4154f1;
+        color: white;
+    }
+
+</style>
+<div class="bottomright">
+    <a href="mailto:asmoneyworldttt@gmail.com?subject=REPORT">REPORT</a>
+</div>
+
 <footer id="footer" class="footer">
     <div class="copyright">
         &copy; Copyright <strong><span>2022</span></strong>

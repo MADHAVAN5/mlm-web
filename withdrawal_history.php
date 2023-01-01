@@ -64,9 +64,9 @@ require_once("resources/function.php")
                                     ?>
                                         <tr>
                                             <th scope="row"><?php echo ++$a; ?></th>
-                                            <td><?php echo $data['amount']; ?></td>
-                                            <td><?php echo $data['payable_amt']; ?></td>
-                                            <td><?php echo $data['amount'] - $data['payable_amt']; ?></td>
+                                            <td><?php echo $data['amount'];echo ($data['usdt']) ? 'USDT' : 'INR'; ?></td>
+                                            <td><?php echo $data['payable_amt'];echo ($data['usdt']) ? 'USDT' : 'INR'; ?></td>
+                                            <td><?php echo $data['amount'] - $data['payable_amt'];echo ($data['usdt']) ? 'USDT' : 'INR'; ?></td>
                                             <td><?php echo ($data['status']) ? 'Request Accepted' : 'Pending'; ?></td>
                                             <td><?php echo $data['req_time']; ?></td>
                                             <td><?php echo ($data['status']) ? $data['approve_time'] : 'NA'; ?></td>

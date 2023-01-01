@@ -90,22 +90,51 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="referral.php">
-            <i class="bi bi-person-plus"></i>
-                <span>Refer and Earn</span>
+            <a class="nav-link collapsed" href="other_income_add.php">
+            <i class="bi bi-currency-exchange"></i>
+                <span>Other Income ADD</span>
             </a>
         </li>
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="package.php">
-                <i class="bi bi-box-seam"></i>
-                <span>Active & Upgrade Package</span>
+            <a class="nav-link collapsed" href="autopool.php">
+            <i class="bi bi-tree"></i>
+                <span>Autopool Tree</span>
             </a>
         </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="added_history.php">
+                <i class="bi bi-currency-rupee"></i>
+                <span>Added History</span>
+            </a>
+        </li>
+        
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="message.php">
+                <i class="bi bi-chat-left-dots"></i>
+                <span>Messages</span>
+            </a>
+        </li>
+
         <li class="nav-item">
             <a class="nav-link collapsed" href="profile.php">
                 <i class="bi bi-person"></i>
                 <span>Profile</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="block.php">
+                <i class="bi bi-patch-exclamation"></i>
+                <span>Block Agent</span>
+            </a>
+        </li>
+        
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="../agent_login.php">
+                <i class="bi bi-box-arrow-in-right"></i>
+                <span>Agent Login</span>
             </a>
         </li>
     </ul>

@@ -42,8 +42,8 @@ require_once("resources/function.php")
                         <img src="assets/img/refer.png" alt="referral">
                         <h3>refer and earn money</h3>
                         <div class="ref_row row">
-                            <span id="ref_link">http://localhost/New%20folder/mlm/register.php?sps_id=<?php echo $my_id; ?></span>
-                            <!-- <span id="ref_link">https://akakum8.dreamhosters.com/register.php?sps_id=<?php //echo $my_id;?></span> -->
+                            <!-- <span id="ref_link">http://localhost/New%20folder/mlm/register.php?sps_id=<?php //echo $my_id; ?></span> -->
+                            <span id="ref_link">https://akakum8.dreamhosters.com/register.php?sps_id=<?php echo $my_id;?></span>
                             <span id="ref_btn">COPY LINK</span>
                         </div>
                     </div>

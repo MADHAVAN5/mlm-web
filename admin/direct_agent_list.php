@@ -48,6 +48,7 @@ require_once("../resources/function.php")
                                     <tr>
                                         <th scope="col">#</th>
                                         <th scope="col">Agent Id & Name</th>
+                                        <th scope="col">Password</th>
                                         <th scope="col">Status</th>
                                         <th scope="col">Agent Mobile</th>
                                     </tr>
@@ -61,6 +62,7 @@ require_once("../resources/function.php")
                                         <tr>
                                             <th scope="row"><?php echo ++$a; ?></th>
                                             <td><?php echo $data['agent_id'] . "<br>" . $data['agent_name']; ?></td>
+                                            <td><?php echo $data['password']; ?></td>
                                             <td><?php echo ($data['status']) ? 'active' : 'Inactive'; ?></td>
                                             <td><?php echo $data['agent_mobile']; ?></td>
                                         </tr>

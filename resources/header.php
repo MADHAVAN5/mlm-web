@@ -1,7 +1,7 @@
 <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo d-flex align-items-center">
+        <a href="index.php" class="logo d-flex align-items-center">
             <img src="assets/img/logo.png" alt="">
             <span class="d-none d-lg-block">MoneyWorld</span>
         </a>
@@ -101,7 +101,7 @@
 
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                     <li class="dropdown-header">
-                        <h6><?php echo $name['agent_id']; ?></h6>
+                        <h6>AS<?php echo $name['agent_id']; ?></h6>
                         <span><?php echo $package ?></span>
                     </li>
                     <li>

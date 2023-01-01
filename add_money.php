@@ -43,7 +43,11 @@ require_once("resources/function.php")
                         <div class="card-body">
                             <h5 class="card-title">Account Details</h5>
                             <p class="card-text">
-                                
+                                Name : Akash Kumar <br>
+                                Acc NO : 139301000026173 <br>
+                                IFSC Code : IOBA0001393
+                                <br><br>
+                                Paytm : 9585368504
                             </p>
                         </div>
                         <img style="padding: 0 20px;" src="assets/img/qr.jpeg" class="card-img-bottom" alt="...">
