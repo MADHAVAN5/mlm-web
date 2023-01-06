@@ -41,6 +41,7 @@ if (isset($_REQUEST['register_btn'])) {
 }
 
 if (isset($_REQUEST['login_btn'])) {
+    insert_in_matrix_autopool(7, 'b_silver');
     $agent_id = mysqli_real_escape_string($conn, $_REQUEST['agent_id']);
     $agent_password = mysqli_real_escape_string($conn, $_REQUEST['agent_password']);
     $data = mysqli_query($conn, "SELECT * FROM `agent` WHERE `agent_id` = '$agent_id'");
@@ -231,9 +232,9 @@ if (isset($_REQUEST['other_income_btn'])) {
     $desp = mysqli_real_escape_string($conn, $_REQUEST['desp']);
     $income = $amt * .90;
     $update = $amt * .10;
-    mysqli_query($conn, "UPDATE `agent_income` SET `wallet`=`wallet`+$income WHERE `agent_id` = '$my_id'");
-    mysqli_query($conn, "UPDATE `agent_income` SET `upgrade_amt`=`upgrade_amt`+$update WHERE `agent_id` = '$my_id'");
+    mysqli_query($conn, "UPDATE `agent_income` SET `wallet`=`wallet`+$income, `upgrade_amt`=`upgrade_amt`+$update WHERE `agent_id` = '$my_id'");
     mysqli_query($conn, "INSERT INTO `wallet_history`(`agent_id`, `amt`, `desp`, `date_time`, `status`) VALUES ('$my_id','$amt','$desp','$time','0')");
+    check_upgrade($my_id);
     $_SESSION['status'] = 4;
     header("Location:./admin/other_income_add.php");
 }
@@ -284,7 +285,7 @@ if (isset($_REQUEST['logout_btn'])) {
 }
 
 if (isset($_REQUEST['b_silver_btn'])) {
-    $package = 'b-silver';
+    $package = 'b_silver';
     $agent = mysqli_real_escape_string($conn,$_REQUEST['user']);
     $wallet = mysqli_fetch_array(mysqli_query($conn, "SELECT * FROM `agent_income` WHERE `agent_id`='$agent'"));
     $amount = $wallet['wallet'];
@@ -294,7 +295,7 @@ if (isset($_REQUEST['b_silver_btn'])) {
         $agent = $agent_id['agent_id'];       
         if ($agent_id['status']=='0') {
             level_income_distribute($agent);
-            insert_in_matrix_autopool($agent);
+            insert_in_matrix_autopool($agent,'b_silver');
         }
         $timestamp = date("Y-m-d h:i:sa");
         $amt = 500;
@@ -310,7 +311,7 @@ if (isset($_REQUEST['b_silver_btn'])) {
 }
 
 if (isset($_REQUEST['b_gold_btn'])) {
-    $package = 'b-gold';
+    $package = 'b_gold';
     $agent = mysqli_real_escape_string($conn,$_REQUEST['user']);
     $wallet = mysqli_fetch_array(mysqli_query($conn, "SELECT * FROM `agent_income` WHERE `agent_id`='$agent'"));
     $amount = $wallet['wallet'];
@@ -319,7 +320,7 @@ if (isset($_REQUEST['b_gold_btn'])) {
         $agent = $agent_id['agent_id'];       
         if ($agent_id['status']=='0') {
             level_income_distribute($agent);
-            insert_in_matrix_autopool($agent);
+            insert_in_matrix_autopool($agent,'b_gold');
         }
         $timestamp = date("Y-m-d h:i:sa");
         $amt = 1000;
@@ -335,7 +336,7 @@ if (isset($_REQUEST['b_gold_btn'])) {
 }
 
 if (isset($_REQUEST['b_diamond_btn'])) {
-    $package = 'b-diamond';
+    $package = 'b_diamond';
     $agent = mysqli_real_escape_string($conn,$_REQUEST['user']);
     $wallet = mysqli_fetch_array(mysqli_query($conn, "SELECT * FROM `agent_income` WHERE `agent_id`='$agent'"));
     $amount = $wallet['wallet'];
@@ -344,7 +345,7 @@ if (isset($_REQUEST['b_diamond_btn'])) {
         $agent = $agent_id['agent_id'];       
         if ($agent_id['status']=='0') {
             level_income_distribute($agent);
-            insert_in_matrix_autopool($agent);
+            insert_in_matrix_autopool($agent,'b_diamond');
         }
         $timestamp = date("Y-m-d h:i:sa");
         $amt = 2500;
@@ -360,7 +361,7 @@ if (isset($_REQUEST['b_diamond_btn'])) {
 }
 
 if (isset($_REQUEST['b_platinum_btn'])) {
-    $package = 'b-platinum';
+    $package = 'b_platinum';
     $agent = mysqli_real_escape_string($conn,$_REQUEST['user']);
     $wallet = mysqli_fetch_array(mysqli_query($conn, "SELECT * FROM `agent_income` WHERE `agent_id`='$agent'"));
     $amount = $wallet['wallet'];
@@ -369,7 +370,7 @@ if (isset($_REQUEST['b_platinum_btn'])) {
         $agent = $agent_id['agent_id'];       
         if ($agent_id['status']=='0') {
             level_income_distribute($agent);
-            insert_in_matrix_autopool($agent);
+            insert_in_matrix_autopool($agent,'b_platinum');
         }
         $timestamp = date("Y-m-d h:i:sa");
         $amt = 6500;
@@ -385,7 +386,7 @@ if (isset($_REQUEST['b_platinum_btn'])) {
 }
 
 if (isset($_REQUEST['p_silver_btn'])) {
-    $package = 'p-silver';
+    $package = 'p_silver';
     $agent = mysqli_real_escape_string($conn,$_REQUEST['user']);
     $wallet = mysqli_fetch_array(mysqli_query($conn, "SELECT * FROM `agent_income` WHERE `agent_id`='$agent'"));
     $amount = $wallet['wallet'];
@@ -394,7 +395,7 @@ if (isset($_REQUEST['p_silver_btn'])) {
         $agent = $agent_id['agent_id'];       
         if ($agent_id['status']=='0') {
             level_income_distribute($agent);
-            insert_in_matrix_autopool($agent);
+            insert_in_matrix_autopool($agent,'p_silver');
         }
         $timestamp = date("Y-m-d h:i:sa");
         $amt = 12500;
@@ -410,7 +411,7 @@ if (isset($_REQUEST['p_silver_btn'])) {
 }
 
 if (isset($_REQUEST['p_gold_btn'])) {
-    $package = 'p-gold';
+    $package = 'p_gold';
     $agent = mysqli_real_escape_string($conn,$_REQUEST['user']);
     $wallet = mysqli_fetch_array(mysqli_query($conn, "SELECT * FROM `agent_income` WHERE `agent_id`='$agent'"));
     $amount = $wallet['wallet'];
@@ -419,7 +420,7 @@ if (isset($_REQUEST['p_gold_btn'])) {
         $agent = $agent_id['agent_id'];       
         if ($agent_id['status']=='0') {
             level_income_distribute($agent);
-            insert_in_matrix_autopool($agent);
+            insert_in_matrix_autopool($agent,'p_gold');
         }
         $timestamp = date("Y-m-d h:i:sa");
         $amt = 55000;
@@ -435,7 +436,7 @@ if (isset($_REQUEST['p_gold_btn'])) {
 }
 
 if (isset($_REQUEST['p_diamond_btn'])) {
-    $package = 'p-diamond';
+    $package = 'p_diamond';
     $agent = mysqli_real_escape_string($conn,$_REQUEST['user']);
     $wallet = mysqli_fetch_array(mysqli_query($conn, "SELECT * FROM `agent_income` WHERE `agent_id`='$agent'"));
     $amount = $wallet['wallet'];
@@ -444,7 +445,7 @@ if (isset($_REQUEST['p_diamond_btn'])) {
         $agent = $agent_id['agent_id'];       
         if ($agent_id['status']=='0') {
             level_income_distribute($agent);
-            insert_in_matrix_autopool($agent);
+            insert_in_matrix_autopool($agent,'p_diamond');
         }
         $timestamp = date("Y-m-d h:i:sa");
         $amt = 80000;

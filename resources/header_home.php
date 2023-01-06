@@ -8,17 +8,26 @@
     .btn {
         color: white;
         background-color: #7158fe;
-        position: relative;
-        float: right;
     }
 
     .btn:hover {
         color: white;
         background-color: blue;
     }
+
+    @media (min-width: 990px) {
+        .btn {
+            position: relative;
+            float: right;
+        }
+    }
+
+    .container-fluid {
+        background: #fff;
+    }
 </style>
 
-<header id="header" class="header fixed-top d-flex align-items-center navbar navbar-expand-lg ">
+<header id="header" class="header fixed-top d-flex align-items-center navbar navbar-expand-lg">
     <div class="container-fluid">
 
         <div class="d-flex align-items-center justify-content-between">

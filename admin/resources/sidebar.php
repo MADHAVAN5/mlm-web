@@ -90,16 +90,52 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="other_income_add.php">
-            <i class="bi bi-currency-exchange"></i>
-                <span>Other Income ADD</span>
+            <a class="nav-link collapsed" data-bs-target="#autopool-nav" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-tree"></i><span>Autopool Tree</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
+            <ul id="autopool-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="b_silver_autopool.php">
+                        <i class="bi bi-circle"></i><span>basic silver</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="b_gold_autopool.php">
+                        <i class="bi bi-circle"></i><span>basic gold</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="b_diamond_autopool.php">
+                        <i class="bi bi-circle"></i><span>basic diamond</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="b_platinum_autopool.php">
+                        <i class="bi bi-circle"></i><span>basic platinum</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="p_silver_autopool.php">
+                        <i class="bi bi-circle"></i><span>premium siver</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="p_gold_autopool.php">
+                        <i class="bi bi-circle"></i><span>premium gold</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="p_diamond_autopool.php">
+                        <i class="bi bi-circle"></i><span>premium diamond</span>
+                    </a>
+                </li>
+            </ul>
         </li>
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="autopool.php">
-            <i class="bi bi-tree"></i>
-                <span>Autopool Tree</span>
+            <a class="nav-link collapsed" href="other_income_add.php">
+            <i class="bi bi-currency-exchange"></i>
+                <span>Other Income ADD</span>
             </a>
         </li>
 

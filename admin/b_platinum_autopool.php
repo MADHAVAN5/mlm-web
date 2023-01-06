@@ -11,7 +11,7 @@ require_once("../resources/function.php")
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Agent</title>
+    <title>Autopool</title>
 
     <?php require_once("../resources/header_links.php"); ?>
 </head>
@@ -26,11 +26,12 @@ require_once("../resources/function.php")
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>Other Income</h1>
+            <h1>autopool list</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                    <li class="breadcrumb-item active">Autopool List</li>
+                    <li class="breadcrumb-item">Autopool List</li>
+                    <li class="breadcrumb-item active">B-Platinum Autopool List</li>
                 </ol>
             </nav>
         </div>
@@ -40,7 +41,7 @@ require_once("../resources/function.php")
                 <div class="col-lg-12">
                     <div class="card recent-sales overflow-auto">
                         <div class="card-body">
-                            <h5 class="card-title">Autopool Agent</h5>
+                            <h5 class="card-title">B-Platinum Autopool List</h5>
 
                             <!-- Table with hoverable rows -->
                             <table class="table table-borderless datatable">
@@ -52,11 +53,12 @@ require_once("../resources/function.php")
                                         <th scope="col">Left</th>
                                         <th scope="col">Middle</th>
                                         <th scope="col">Right</th>
+                                        <th scope="col">downline</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php
-                                    $autopool = mysqli_query($conn, "SELECT * FROM `matrix_autopool`");
+                                    $autopool = mysqli_query($conn, "SELECT * FROM `b_platinum`");
                                     $a = 0;
                                     while ($data = mysqli_fetch_array($autopool)) {
                                     ?>
@@ -67,6 +69,7 @@ require_once("../resources/function.php")
                                             <td><?php echo $data['left_pos']; ?></td>
                                             <td><?php echo $data['mid_pos']; ?></td>
                                             <td><?php echo $data['right_pos']; ?></td>
+                                            <td><?php echo $data['downline']; ?></td>
                                         </tr>
                                     <?php
                                     }
